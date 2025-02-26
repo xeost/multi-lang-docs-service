@@ -1,0 +1,74 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "multi-lang-docs-service",
+  "main": "src/index.ts",
+  "compatibility_date": "2025-02-26",
+  // "compatibility_flags": [
+  //   "nodejs_compat"
+  // ],
+  // "vars": {
+  //   "MY_VAR": "my-variable"
+  // },
+  // "kv_namespaces": [
+  //   {
+  //     "binding": "MY_KV_NAMESPACE",
+  //     "id": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+  //   }
+  // ],
+  // "r2_buckets": [
+  //   {
+  //     "binding": "MY_BUCKET",
+  //     "bucket_name": "my-bucket"
+  //   }
+  // ],
+  // "d1_databases": [
+  //   {
+  //     "binding": "MY_DB",
+  //     "database_name": "my-database",
+  //     "database_id": ""
+  //   }
+  // ],
+  // "ai": {
+  //   "binding": "AI"
+  // },
+  // "observability": {
+  //   "enabled": true,
+  //   "head_sampling_rate": 1
+  // }
+
+  // Environment-specific configurations
+  "env": {
+    // Development environment
+    "dev": {
+      // Worker name for the dev environment
+      "name": "multi-lang-docs-service-dev",
+      // D1 database bindings for dev
+      "d1_databases": [
+        {
+          // Binding name used in code (e.g., c.env.DB)
+          "binding": "DB",
+          // Name of the D1 database in Cloudflare
+          "database_name": "multi-lang-docs-service-dev",
+          // Unique ID of the dev database (replace with actual ID)
+          "database_id": "4f37a4bf-babf-405b-8b12-3580b14ef215"
+        }
+      ]
+    },
+    // Production environment
+    "prod": {
+      // Worker name for the prod environment
+      "name": "multi-lang-docs-service-prod",
+      // D1 database bindings for prod
+      "d1_databases": [
+        {
+          // Binding name used in code (e.g., c.env.DB)
+          "binding": "DB",
+          // Name of the D1 database in Cloudflare
+          "database_name": "multi-lang-docs-service-prod",
+          // Unique ID of the prod database (replace with actual ID)
+          "database_id": "989b5ac5-150d-42fc-b0fd-a333b7fd53a0"
+        }
+      ]
+    }
+  }
+}
