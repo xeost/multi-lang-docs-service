@@ -2,6 +2,7 @@
   "name": "multi-lang-docs-service",
   "scripts": {
     "dev": "wrangler dev -e dev",
+    "prod": "wrangler dev -e prod",
     "deploy": "wrangler deploy --minify"
   },
   "dependencies": {
