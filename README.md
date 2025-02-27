@@ -46,13 +46,13 @@ wrangler d1 migrations create multi-lang-docs-service-db init_schema -e prod
 To apply the migration in dev locally:
 
 ```
-npx wrangler d1 migrations apply multi-lang-docs-service-dev-db --local -e dev
+wrangler d1 migrations apply multi-lang-docs-service-dev-db --local -e dev
 ```
 
 To apply the migration in prod locally:
 
 ```
-npx wrangler d1 migrations apply multi-lang-docs-service-db --local -e prod
+wrangler d1 migrations apply multi-lang-docs-service-db --local -e prod
 ```
 
 To apply the migrations remotely: it will be applied automatically in the GitHub action.
@@ -62,13 +62,11 @@ To apply the migrations remotely: it will be applied automatically in the GitHub
 To list pending migrations:
 
 ```
-npx wrangler d1 migrations list multi-lang-docs-service-dev-db --local -e dev
-npx wrangler d1 migrations list multi-lang-docs-service-db --local -e prod
+wrangler d1 migrations list multi-lang-docs-service-dev-db --local -e dev
+wrangler d1 migrations list multi-lang-docs-service-db --local -e prod
 ```
 
 ```
-npx wrangler d1 migrations list multi-lang-docs-service-dev-db -e dev
-npx wrangler d1 migrations list multi-lang-docs-service-db -e prod
+wrangler d1 migrations list multi-lang-docs-service-dev-db --remote -e dev
+wrangler d1 migrations list multi-lang-docs-service-db --remote -e prod
 ```
-
-(I don't tried it yet)
