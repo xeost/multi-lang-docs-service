@@ -1,5 +1,0 @@
-CREATE TABLE documents (
-  id INTEGER PRIMARY KEY AUTOINCREMENT,
-  lang TEXT NOT NULL,
-  content TEXT NOT NULL
-);
